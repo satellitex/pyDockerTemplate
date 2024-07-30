@@ -1,8 +1,8 @@
-FROM srbry/pipenv
+FROM satellitex/python-bot-env
 
 WORKDIR /usr/src/app
 COPY . /usr/src/app/
 
-RUN pipenv install
+RUN poetry install
 
-ENTRYPOINT ["pipenv", "run", "python", "main.py"]
+ENTRYPOINT ["python", "main.py"]
